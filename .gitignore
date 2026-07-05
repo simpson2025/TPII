@@ -1,0 +1,10 @@
+.vs/
+bin/
+obj/
+wwwroot/lib/
+*.user
+*.suo
+*.cache
+*.log
+TestResults/
+publish/
