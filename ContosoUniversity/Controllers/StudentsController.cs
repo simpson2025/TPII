@@ -58,6 +58,7 @@ namespace ContosoUniversity.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,LastName,FirstMidName,EnrollmentDate")] Student student)
         {
+           
             if (ModelState.IsValid)
             {
                 _context.Add(student);
