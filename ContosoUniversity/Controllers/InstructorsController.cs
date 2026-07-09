@@ -19,7 +19,7 @@ namespace ContosoUniversity.Controllers
         {
             _context = context;
         }
-
+         
         // GET: Instructors
         public async Task<IActionResult> Index(int? id, int? courseID)
         {
