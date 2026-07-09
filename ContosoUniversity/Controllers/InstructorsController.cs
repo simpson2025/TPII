@@ -100,6 +100,7 @@ namespace ContosoUniversity.Controllers
                     instructor.CourseAssignments.Add(courseToAdd);
                 }
             }
+
             if (ModelState.IsValid)
             {
                 _context.Add(instructor);
@@ -109,13 +110,6 @@ namespace ContosoUniversity.Controllers
             PopulateAssignedCourseData(instructor);
             return View(instructor);
         }
-
-
-
-
-
-
-
 
 
         // GET: Instructors/Edit/5
