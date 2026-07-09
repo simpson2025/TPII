@@ -19,6 +19,31 @@ namespace ContosoUniversity.Controllers
             _context = context;
         }
 
+
+
+        public IActionResult UpdateCourseCredits()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateCourseCredits(int? multiplier)
+        {
+            if (multiplier != null)
+            {
+                ViewData["RowsAffected"] =
+                    await _context.Database.ExecuteSqlRawAsync(
+                        "UPDATE Course SET Credits = Credits * {0}",
+                        multiplier);
+            }
+
+            return View();
+        }
+
+
+
+
+
         // GET: Courses
         public async Task<IActionResult> Index()
         {
